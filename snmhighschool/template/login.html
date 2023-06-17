@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <style>
+        .log{
+            background-color: rgba(222, 184, 135, 0.781);
+            width: 400px;
+            margin-top: 170px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .log input{
+            width: 230px;
+            height: 26px;
+            padding-left: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .log button{
+            width: 250px;
+            height: 28px;
+            border: none;
+            border-radius: 5px;
+            font-size: large;
+            background-color: brown;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .log button:hover{
+            transform: scale(1.1);
+            background-color: brown;
+            color: goldenrod;
+        }
+    </style>
+</head>
+{% load static %}
+<body background="{% static 'images/login.jpg' %}" style="background-size: cover;">
+    <center>
+    <div class="log">
+        <h1>Login</h1>
+        <font color="red">{{msg}}</font>
+        <form action="{% url 'logpage' %}" method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="Username" name="uname" required><br>
+            <input type="password" placeholder="Password" name="pas" required><br>
+            <button>Submit</button>
+        </form>
+        <font color="red">{{msg}}</font>
+    </div>
+</center>
+</body>
+</html>
