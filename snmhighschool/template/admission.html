@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission</title>
+
+    <style>
+        body{
+
+        }
+        .main{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border-radius: 10px;
+            background-color:rgba(222, 184, 135, 0.689);
+            margin-top: 20px;
+            height: auto;
+            padding-bottom: 20px;
+        }
+        .main h1{
+            margin-left: 30px;
+            margin-top: 40px;
+            padding: 20px;
+        }
+        .pg-details{
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .pg-details input{
+            padding: 5px;
+            margin-bottom: 20px;
+            margin-top: 7px;
+            width: 300px;
+            height: 25px;
+            border: none;
+            border-bottom: 2px solid black;
+            border-radius: 5px;
+        }
+        .pg-details select{
+            padding: 3px;
+            margin-top: 5px;
+            margin-bottom: 7px;
+            width: 300px;
+            height: 25px;
+        }
+        .pg-details button{
+            height: 30px;
+            width: 300px;
+            color: white;
+            background-color: rgb(212, 49, 49);
+            border: none;
+            border-bottom: 2px solid black;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body style="background-image: url({%static 'images/admission.jpg'%});">
+    <center>
+    <div class="main">
+        <h1>Student Admission</h1>
+        <div class="pg-details">
+            <form action="">
+
+            <label for="Adm_no">Admission No:</label><br>
+            <input type="number" placeholder="Enter Admission number"><br>
+
+            <label for="name">Name :</label><br>
+            <input type="text" placeholder="Enter name"><br>
+            
+            <label for="name">Age :</label><br>
+            <input type="number" placeholder="Enter age"><br>
+            
+            <label for="place">Place :</label><br>
+            <input type="text" placeholder="Enter Place"><br>
+            
+            <label for="Subject">Subject :</label><br>
+            <select name="subject" id=""><br>
+                <option value="">Science</option>
+                <option value="">Commerce</option>
+                <option value="">Humanities</option>
+            </select><br><br>
+            
+            <label for="Gname">Guardian name :</label><br>
+            <input type="text" placeholder="Enter Guardians name"><br>
+            
+            <label for="dob">Date of Birth :</label><br>
+            <input type="date" placeholder="Enter name"><br>
+            
+            <label for="Ctno">Contact No:</label><br>
+            <input type="text" placeholder="Enter Contact Details"><br>
+
+            <button type="submit">Submit</button>
+
+            <button type="submit">Submit and Continue</button>
+
+            </form>
+        </div>
+    </div>
+    </center>
+</body>
+</html>

@@ -7,6 +7,9 @@ from django.contrib.auth.models import User
 def home(request):
     return render(request,'home.html')
 
+def about(request):
+    return render(request,'about.html')
+
 def log(request):
     if request.method=='POST':
         uname=request.POST['uname']
@@ -50,6 +53,6 @@ def logout(request):
     auth.logout(request)
     return redirect('/')
 
+def admission(request):
+    return render(request,'admission.html')
 
-def about(request):
-    return render(request,'about.html')
