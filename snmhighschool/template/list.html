@@ -49,17 +49,19 @@
                         <th><b>Contact No.</b></th>
                         <th><b>E-mail</b></th>
                     </tr>
+                    {% for i in data %}
                     <tr>
-                        <td>Admission No.</td>
-                        <td>Name</td>
-                        <td>Age</td>
-                        <td>Place</td>
-                        <td>Subject</td>
-                        <td>Guardian name</td>
-                        <td>Date of Birth</td>
-                        <td>Contact No.</td>
-                        <td>E-mail</td>
+                        <td>{{i.ad_no}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.age}}</td>
+                        <td>{{i.place}}</td>
+                        <td>{{i.subject}}</td>
+                        <td>{{i.gname}}</td>
+                        <td>{{i.dob}}</td>
+                        <td>{{i.contact}}</td>
+                        <td>{{i.email}}</td>
                     </tr>
+                    {% endfor %}
                     <tr>
                         <td>Admission No.</td>
                         <td>Name</td>

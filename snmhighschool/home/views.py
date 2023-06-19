@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib import auth
 from django.contrib.auth.models import User
+from .models import student
 
 # Create your views here.
 def home(request):
@@ -54,8 +55,18 @@ def logout(request):
     return redirect('/')
 
 def admission(request):
+    ad_no=request.POST['ad_no']
+    name=request.POST['']
+    age=request.POST['']
+    place=request.POST['']
+    subject=request.POST['']
+    gname=request.POST['']
+    dob=request.POST['']
+    contact=request.POST['']
+    email=request.POST['']
     return render(request,'admission.html')
 
 def list(request):
-    return render(request,'list.html')
+    obj=student.objects.all()
+    return render(request,'list.html',{'data':obj})
 
