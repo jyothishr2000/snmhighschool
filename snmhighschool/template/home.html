@@ -17,8 +17,8 @@
                 {% if user.is_staff or user.is_superuser %}
                 <a href="/">{{user.username}}</a>
                 <a href="logout/">LOGOUT</a>
-                <a href="admission/">ADMISSION</a>
-                <a href="">DISPLAY</a>
+                <a href="/admission/">ADMISSION</a>
+                <a href="/list/">DISPLAY</a>
                 {% elif user.is_authenticated %}
                 <a href=" ">{{user.username}}</a>
                 <a href="logout/">LOGOUT</a>

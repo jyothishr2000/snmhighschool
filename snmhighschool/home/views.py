@@ -56,3 +56,6 @@ def logout(request):
 def admission(request):
     return render(request,'admission.html')
 
+def list(request):
+    return render(request,'list.html')
+

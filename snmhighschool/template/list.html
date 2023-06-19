@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <link rel="stylesheet" href="{%static 'css/list.css'%}">
+</head>
+<body>
+    <div class="main">
+        <div class="top">
+            <div class="header">
+                <a href="/">HOME</a>
+        <a href="/about/">ABOUT</a>
+            {% if user.is_staff or user.is_superuser %}
+            <a href="/">{{user.username}}</a>
+            <a href="/logout/">LOGOUT</a>
+            <a href="/admission/">ADMISSION</a>
+            <a href="/list/">DISPLAY</a>
+            {%endif%}
+            </div>
+            <div class="top-body" style="background-image: url({%static 'images/about.jpg'%})">
+                <center>
+                    <div class="top-mid">
+                        <h1>S.N.M Higher Secondary School</h1>
+                    </div>
+                </center>
+            </div>
+        </div>
+        <div class="mid">
+            <center>
+                <div class="sorter">
+                    <a href="">All</a>
+                    <a href="">Science</a>
+                    <a href="">Commerce</a>
+                    <a href="">Humanities</a>
+                </div>
+                <table>
+                    <tr>
+                        <th><b>Admission No.</b></th>
+                        <th><b>Name</b></th>
+                        <th><b>Age</b></th>
+                        <th><b>Place</b></th>
+                        <th><b>Subject</b></th>
+                        <th><b>Guardian name</b></th>
+                        <th><b>Date of Birth</b></th>
+                        <th><b>Contact No.</b></th>
+                        <th><b>E-mail</b></th>
+                    </tr>
+                    <tr>
+                        <td>Admission No.</td>
+                        <td>Name</td>
+                        <td>Age</td>
+                        <td>Place</td>
+                        <td>Subject</td>
+                        <td>Guardian name</td>
+                        <td>Date of Birth</td>
+                        <td>Contact No.</td>
+                        <td>E-mail</td>
+                    </tr>
+                    <tr>
+                        <td>Admission No.</td>
+                        <td>Name</td>
+                        <td>Age</td>
+                        <td>Place</td>
+                        <td>Subject</td>
+                        <td>Guardian name</td>
+                        <td>Date of Birth</td>
+                        <td>Contact No.</td>
+                        <td>E-mail</td>
+                    </tr>
+                    <tr>
+                        <td>Admission No.</td>
+                        <td>Name</td>
+                        <td>Age</td>
+                        <td>Place</td>
+                        <td>Subject</td>
+                        <td>Guardian name</td>
+                        <td>Date of Birth</td>
+                        <td>Contact No.</td>
+                        <td>E-mail</td>
+                    </tr>
+                </table>
+            </center>
+        <div class="footer">
+            <div class="contact">
+                <p>Contact : +91 123345677;&nbsp;&nbsp; E-mail : nrkprincipal123@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
