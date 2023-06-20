@@ -50,19 +50,6 @@ body{
     color: burlywood;
     background-color: black;
 }
-.top-mid button{
-    width: 200px;
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 25px;
-    background-color:brown;
-    color: antiquewhite;
-}
-.top-mid button:hover{
-    transform: scale(1.1);
-    background-color: burlywood;
-    color: brown;
-}
 
 /* top display end  */
 /* mid display start  */

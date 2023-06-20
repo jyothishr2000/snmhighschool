@@ -50,19 +50,7 @@ body{
     color: burlywood;
     background-color: black;
 }
-.top-mid button{
-    width: 200px;
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 25px;
-    background-color:brown;
-    color: antiquewhite;
-}
-.top-mid button:hover{
-    transform: scale(1.1);
-    background-color: burlywood;
-    color: brown;
-}
+
 
 /* top display end  */
 /* mid display start  */
@@ -72,42 +60,41 @@ body{
     height: auto;
     margin: 0px;
     background-color: burlywood;
-    padding-top: 20px;
+    padding-top: 10px;
 }
-.sorter{
-    margin: 0px;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.sorter a{
-    background-color: brown;
-    color:black ;
+.mid button{
     padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: brown;
+    color: antiquewhite;
     border-radius: 10px;
-    text-decoration: none;
-    margin: 10px;
 }
-.sorter a:hover{
-    color: goldenrod;
-    text-decoration:underline;
-    transform:scale(1.2)
+.mid h1{
+    background-color: black;
+    color: antiquewhite;
 }
-table{
-    background-color: antiquewhite;
-    margin: 20px;
-    border: 5px;
-    border-radius: 10px;
-    width: 75%;
+
+.student-table{
+    margin-top: 30px;
+    margin-left: 200px;
+    margin-bottom: 30px;   
 }
-table th{
-    height: 50px;
-    margin: 10px;
+.student-table th{
+    width: 100px;
+    height: 20px;
     background-color: goldenrod;
-}
-table td{
+    border-radius: 10px;
     text-align: center;
 }
+.student-table td{
+    width: 120px;
+    height: 20px;
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+
 
 /* mid display end  */
 /* footer display start  */

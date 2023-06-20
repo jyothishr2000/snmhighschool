@@ -55,18 +55,34 @@ def logout(request):
     return redirect('/')
 
 def admission(request):
-    ad_no=request.POST['ad_no']
-    name=request.POST['']
-    age=request.POST['']
-    place=request.POST['']
-    subject=request.POST['']
-    gname=request.POST['']
-    dob=request.POST['']
-    contact=request.POST['']
-    email=request.POST['']
-    return render(request,'admission.html')
+    if request.method=='POST':
+        ad_no=request.POST['ad_no']
+        name=request.POST['name']
+        age=request.POST['age']
+        place=request.POST['place']
+        subject=request.POST['subject']
+        gname=request.POST['gname']
+        dob=request.POST['dob']
+        contact=request.POST['contact']
+        email=request.POST['email']
+        if student.objects.filter(ad_no=ad_no):
+            msg='Admission no. already exists'
+            return render(request,'admission.html',{'msg':msg})
+        else:
+            stud=student.objects.create(ad_no=ad_no,name=name,age=age,place=place,subject=subject,gname=gname,dob=dob,contact=contact,email=email)
+            stud.save()
+            msg='Student added successfully'
+            return render(request,'admission.html',{'msg':msg})
+    else:
+        if not request.user.is_staff:
+            return redirect('/')
+        else:
+            return render(request,'admission.html')
 
 def list(request):
-    obj=student.objects.all()
-    return render(request,'list.html',{'data':obj})
+    alldata= student.objects.all()
+    c_stud=student.objects.filter(subject='Commerce')
+    h_stud=student.objects.filter(subject='Humanities')
+    s_stud=student.objects.filter(subject='Science')
+    return render(request,'list.html',{'alldata':alldata,'c_stud':c_stud, 'h_stud':h_stud, 's_stud':s_stud })
 
