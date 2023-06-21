@@ -17,4 +17,11 @@ class student(models.Model):
     dob=models.DateField()
     contact=models.CharField(max_length=13)
     email=models.EmailField()
+    def __str__(self):
+        return self.name
 
+class message1(models.Model):
+    comment=models.CharField(max_length=500)
+
+class message2(models.Model): 
+    enquire=models.CharField(max_length=500)

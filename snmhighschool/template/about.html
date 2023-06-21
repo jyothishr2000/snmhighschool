@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="{%static 'css/about.css'%}">
+    <link rel="stylesheet" href="{%static 'css/about1.css'%}">
 </head>
 <body>
     <div class="main">
@@ -46,6 +46,14 @@
             </center>
             <div class="inner-mid">
                 <div class="pro-div">
+                    <img src="{%static 'images/emblem.jpg'%}" alt="">
+                    <center><p>Design templates are pre-made designs and documents that can be customized. Templates are
+                    often designed to meet specific standards or specs so they're consistent between users and
+                    mediums. You can use pre-designed templates from template libraries and websites or create
+                    custom templates for future use.</p></center><br>
+                </div>
+            <div class="inner-mid">
+                <div class="pro-div">
                     <img src="{%static 'images/class.jpg'%}" alt="">
                     <center><p>Design templates are pre-made designs and documents that can be customized. Templates are
                     often designed to meet specific standards or specs so they're consistent between users and
@@ -68,19 +76,32 @@
                 </div>
             </div>
         </div>
+    </div>
         <div class="footer">
             <div class="contact">
                 <h2>Contact : +91 123345677</h2><br>
                 <h2>E-mail : nrkprincipal123@gmail.com</h2><br><br>
             </div>
             <div class="msg">
-                <form action="">
-                <h2>Comments:</h2><br>
-                <input type="text" placeholder="Leave your message here"><br><br>
-                <button>Send</button>
-                </form>
+                {% if user.is_superuser %}
+                <h2>Logged in as:</h2><br>
+                <b>{{user.username}}</b>
+                {% elif user.is_authenticated %}
+                    <h2>Enquire:</h2><br>
+                    <form action="{%url 'aboutpage'%}" method="POST">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Leave your message here" name="enquire" required><br><br>
+                        <button type="submit">Send</button>
+                    </form>
+                {% else %}
+                    <h2>Comments:</h2><br>
+                    <form action="{%url 'aboutpage'%}" method="POST">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Leave your message here" name="comment" required><br><br>
+                        <button type="submit">Send</button>
+                    </form>
+                {% endif %}
             </div>
         </div>
-    </div>
 </body>
 </html>

@@ -91,18 +91,17 @@ body{
     padding-left: 30px;
 }
 .inner-mid{
-    width: 90%;
-    display:contents; 
-    padding: 20px;
+    width: 90%; 
+    padding: 30px;
+    margin-left: 50px;
 }
 .pro-div{
-    display: flex;
-    text-align: center;
+    display: flexbox;
     margin: 20px;
     padding-bottom: 10px;
     padding-top: 20px;
     border-radius: 10px;
-    background-color: aliceblue;
+    background-color: antiquewhite;
 }
 .pro-div img{
     width: 500px;
@@ -120,8 +119,20 @@ body{
 .mid p{
     width: 60%;
 }
-.pro-div:hover{
-    
+
+#more{
+    width: 200px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 25px;
+    background-color:brown;
+    color: antiquewhite;
+}
+
+#more:hover{
+    transform: scale(1.1);
+    background-color: burlywood;
+    color: brown;
 }
 
 /* mid display end  */
