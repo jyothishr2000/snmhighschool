@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="{%static 'css/home1.css'%}">
+    <link rel="stylesheet" href="{%static 'css/home2.css'%}">
 </head>
 <body>
     <div class="main">
@@ -32,10 +32,10 @@
                 <center>
                     <div class="top-mid">
                         <h1>S.N.M Higher Secondary School</h1>
-                        <p>Design templates are pre-made designs and documents that can be customized. Templates are
-                        often designed to meet specific standards or specs so they're consistent between users and
-                        mediums. You can use pre-designed templates from template libraries and websites or create
-                        custom templates for future use.</p>
+                        <p>Om Asato Maa Sad-Gamaya |<br>
+                        Tamaso Maa Jyotir-Gamaya |<br>
+                        Mrtyor-Maa Amrtam Gamaya |<br>
+                        Om Shaantih Shaantih Shaantih ||</p>
                         {% if user.is_superuser %}
                         <form action="{% url 'admissionpage' %}"><button>ADMIN</button></form>
                         {% elif user.is_staff %}
@@ -53,17 +53,18 @@
         <div class="mid">
             <center>
                 <h1>About</h1>
-                <p>Design templates are pre-made designs and documents that can be customized. Templates areoften designed to meet specific standards or specs so they're consistent between users and
-                mediums. You can use pre-designed templates from template libraries and websites or create
-                custom templates for future use.</p>
+                <p>S.N.M Higher Secondary School wass established in 1999 in Thiruvananthapuram District, Kerala.
+                    The Goal of this institute is to provide basic higher studies basics required for all students;
+                    which include Science (Physics, Chemisty, Biology, Computer Science), Commerce and Humanities.  
+                </p>
             </center>
             <div class="inner-mid">
                 <div class="pro-div">
                     <center><img src="{%static 'images/emblem.jpg' %}" alt=""><br>
-                    <p>Design templates are pre-made designs and documents that can be customized. Templates are
-                    often designed to meet specific standards or specs so they're consistent between users and
-                    mediums. You can use pre-designed templates from template libraries and websites or create
-                    custom templates for future use.</p></center><br>
+                    <p>Higher secondary is also known as Senior Secondary in some places. It refers to the education imparted in the eleventh and twelfth standard in schools.
+                        The schools which provide education up to these classes are known as Higher secondary schools.
+                        A higher level of education is important for further studies and for getting admission to top colleges.
+                        In India, various boards like CBSE, ICSE, and other state boards conduct the Higher secondary school examination.</p></center><br>
                 </div>
             </div>
             <center>
@@ -78,25 +79,8 @@
                 <h2>E-mail : nrkprincipal123@gmail.com</h2><br><br>
             </div>
             <div class="msg">
-                {% if user.is_superuser %}
-                <h2>Logged in as:</h2><br>
-                <h3>Username: {{user.username}}</h3>
-                <h3>E-mail: {{user.email}}</h3>
-                {% elif user.is_authenticated %}
-                    <h2>Enquire:</h2><br>
-                    <form action="{%url 'homepage'%}" method="POST">
-                        {% csrf_token %}
-                        <input type="text" placeholder="Leave your message (with username) here" name="enquire"required><br><br>
-                        <button type="submit">Send</button>
-                    </form>
-                {% else %}
-                    <h2>Comments:</h2><br>
-                    <form action="{%url 'homepage'%}" method="POST">
-                        {% csrf_token %}
-                        <input type="text" placeholder="Leave your message here" name="comment" required><br><br>
-                        <button type="submit">Send</button>
-                    </form>
-                {% endif %}
+                <img src="{%static 'images/emblem.jpg' %}" alt=""><br>
+                <h3>For an Educated Society</h3>
             </div>
         </div>
     </div>

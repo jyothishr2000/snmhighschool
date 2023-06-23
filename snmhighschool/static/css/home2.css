@@ -153,25 +153,15 @@ body{
 .msg{
     width: 60%;
     padding-left: 150px;
-    margin-right: 20px
+    margin-right: 20px;
+    text-align: center;
 }
-.msg input{
+.msg img{
     width: 500px;
-    height: 150px;
-    border-radius: 5px;
-}
-.msg button{
-    width: 100px;
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 15px;
-    background-color:brown;
-    color: antiquewhite;
-}
-.msg button:hover{
-    transform: scale(1.1);
-    background-color: burlywood;
-    color: brown;
+    height: 250px;
+    border-radius: 20px;
+    background-size: contain;
+    margin-left: 20px;
 }
 
 

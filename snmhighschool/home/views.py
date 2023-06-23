@@ -2,40 +2,14 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib import auth
 from django.contrib.auth.models import User
-from .models import student
-from .models import message1
-from .models import message2
+from .models import student, message1, message2
 
 # Create your views here.
 def home(request):
-    if request.method=='POST':
-        enquire=request.POST['enquire']
-        comment=request.POST['comment']
-        if request.user.is_authenticated:
-            sav=message2.objects.create(enquire=enquire)
-            sav.save()
-            return render(request,'home.html')
-        else:
-            sav=message1.objects.create(comment=comment)
-            sav.save()
-            return render(request,'home.html')
-    else:
-        return render(request,'home.html')
+    return render(request,'home.html')
 
 def about(request):
-    if request.method=='POST':
-        enquire=request.POST['enquire']
-        comment=request.POST['comment']
-        if request.user.is_authenticated:
-            sav=message2.objects.create(enquire=enquire)
-            sav.save()
-            return render(request,'about.html')
-        else:
-            sav=message1.objects.create(comment=comment)
-            sav.save()
-            return render(request,'about.html')
-    else:
-        return render(request,'about.html')
+     return render(request,'about.html')
 
 def log(request):
     if request.method=='POST':

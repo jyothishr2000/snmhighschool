@@ -21,7 +21,9 @@ class student(models.Model):
         return self.name
 
 class message1(models.Model):
+    id=models.IntegerField(primary_key=True)
     comment=models.CharField(max_length=500)
 
-class message2(models.Model): 
+class message2(models.Model):
+    id=models.IntegerField(primary_key=True)
     enquire=models.CharField(max_length=500)
